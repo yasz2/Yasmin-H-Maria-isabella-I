@@ -1,2 +1,11 @@
 .identificação {background-color: #DDA0DD;
 }
+body{
+
+    background-color: pink;
+    color: blue;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
