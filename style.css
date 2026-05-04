@@ -1,27 +1,30 @@
-.identificação {background-color: #DDA0DD;
+.identificação {
+    background-color: #DDA0DD;
 }
-.galeria
-{
+
+.galeria {
     width: 35%;
 }
-body{
+
+body {
 
     background-color: pink;
     color: rgb(255, 100, 172);
     display: flex;
     align-items: stretch;
-    flex-wrap: wrap;
-    justify-content: justify content;
+    justify-content: space-around;
 }
- .link{
-display: flex;
-flex-direction: column;
+
+.link {
+    display: flex;
+    flex-direction: column;
 }
-a{
-margin: 20px;
-padding: 20px;
-background-color: 255, 100, 172;
-color: #ff59b4;
-border-radius: 20px;
+
+a {
+    margin: 20px;
+    padding: 20px;
+    background-color: 255, 100, 172;
+    color: #ff59b4;
+    border-radius: 20px;
 
 }
