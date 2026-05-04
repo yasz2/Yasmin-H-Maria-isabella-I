@@ -11,7 +11,7 @@ body{
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
-    justify-content: justify content:center;
+    justify-content: justify content;
 }
  .link{
 display: flex;
