@@ -13,3 +13,8 @@ body{
     flex-wrap: wrap;
     justify-content: justify content:center;
 }
+ .link{
+display: flex;
+flex-direction: column;
+
+}
