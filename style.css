@@ -3,7 +3,7 @@
 body{
 
     background-color: pink;
-    color: blue;
+    color: rgb(255, 100, 172);
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
