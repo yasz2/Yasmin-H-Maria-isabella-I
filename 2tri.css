@@ -1,288 +1,413 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ── TOKENS ── */
+:root {
+  --verde-escuro: #3b4a2f;
+  --verde-medio: #5a6e3c;
+  --dourado:     #c9a227;
+  --dourado-claro: #e8c84a;
+  --creme:       #f5f0e0;
+  --bege:        #ede0c0;
+  --texto:       #2c2a1e;
+  --branco:      #ffffff;
+}
+
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
 }
 
 body {
-    font-family: Georgia, 'Times New Roman', serif;
-    background-color: #f5f0e1;
-    color: #3b2a0e;
+  font-family: 'Georgia', serif;
+  background: var(--creme);
+  color: var(--texto);
+  line-height: 1.7;
 }
 
 /* ── HEADER ── */
 header {
-    background-color: #c8b86e;
-    text-align: center;
-    padding: 30px 40px 0;
-    border-bottom: 3px solid #8b6914;
+  background: var(--verde-escuro);
+  text-align: center;
+  padding: 28px 20px 8px;
 }
 
-.header-topo h1 {
-    font-size: 2.8rem;
-    font-weight: 900;
-    color: #3b2a0e;
-    letter-spacing: 3px;
-    line-height: 1.2;
-    margin-bottom: 20px;
+.site-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--dourado-claro);
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
+.site-subtitle {
+  font-size: 1rem;
+  color: var(--bege);
+  letter-spacing: 6px;
+  margin-bottom: 18px;
+}
+
+/* decoração de abelhas no header */
+.bee-deco {
+  font-size: 1.4rem;
+  letter-spacing: 8px;
+  color: var(--dourado);
+  margin-bottom: 10px;
+}
+
+/* ── NAV ── */
 nav {
-    display: flex;
-    justify-content: center;
-    gap: 0;
-    border-top: 2px dashed #8b6914;
-    padding-top: 10px;
+  background: var(--verde-medio);
+  display: flex;
+  justify-content: center;
+  gap: 0;
 }
 
 nav a {
-    text-decoration: none;
-    color: #3b2a0e;
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    padding: 10px 40px;
-    border-right: 2px dashed #8b6914;
-    transition: background-color 0.2s;
+  color: var(--creme);
+  text-decoration: none;
+  padding: 12px 36px;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-right: 1px solid rgba(255,255,255,0.2);
+  transition: background 0.2s, color 0.2s;
 }
 
-nav a:first-child {
-    border-left: 2px dashed #8b6914;
+nav a:last-child { 
+  border-right: none; 
 }
 
 nav a:hover {
-    background-color: rgba(139, 105, 20, 0.2);
+  background: var(--dourado);
+  color: var(--verde-escuro);
 }
 
-/* ── O QUE É APICULTURA ── */
-.secao-oque {
-    background-color: #f5f0e1;
-    padding: 40px 60px;
-    border-bottom: 2px dashed #c8b86e;
+/* ── SEÇÕES GENÉRICAS ── */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.oque-box {
-    max-width: 900px;
-    margin: 0 auto;
+.section-label {
+  display: inline-block;
+  background: var(--verde-escuro);
+  color: var(--dourado-claro);
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  border-radius: 2px;
+  margin-bottom: 10px;
 }
 
-.oque-box h2 {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: #3b2a0e;
-    margin-bottom: 14px;
+h2 {
+  font-size: 2rem;
+  color: var(--verde-escuro);
+  margin-bottom: 20px;
+  border-left: 5px solid var(--dourado);
+  padding-left: 14px;
 }
 
-.oque-box p {
-    font-size: 0.95rem;
-    line-height: 1.8;
-    text-align: justify;
-    color: #3b2a0e;
+h3 {
+  font-size: 1.2rem;
+  color: var(--verde-medio);
+  margin: 20px 0 8px;
+}
+
+p { 
+  margin-bottom: 14px; 
+}
+
+strong { 
+  color: var(--verde-escuro); 
+}
+
+/* ── HERO / HOME ── */
+#home {
+  background: linear-gradient(135deg, var(--verde-escuro) 0%, var(--verde-medio) 60%, var(--dourado) 100%);
+  max-width: 100%;
+  padding: 80px 20px;
+  text-align: center;
+  color: var(--creme);
+}
+
+#home .home-inner {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#home h1 {
+  font-size: 2.8rem;
+  color: var(--dourado-claro);
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+#home .tagline {
+  font-size: 1.1rem;
+  color: var(--bege);
+  max-width: 560px;
+  margin: 0 auto 28px;
+  line-height: 1.8;
+}
+
+#home .hero-badge {
+  display: inline-block;
+  border: 2px solid var(--dourado-claro);
+  color: var(--dourado-claro);
+  padding: 10px 30px;
+  border-radius: 40px;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#home .emojis {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+/* ── O QUE É APICULTURA card ── */
+.info-card {
+  background: var(--branco);
+  border-left: 6px solid var(--dourado);
+  border-radius: 6px;
+  padding: 28px 32px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+.info-card h3 {
+  color: var(--dourado);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.info-card p span.destaque {
+  color: var(--dourado);
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: var(--dourado);
 }
 
 /* ── SOBRE ── */
-.secao-sobre {
-    background-color: #f5f0e1;
-    padding: 50px 60px;
-    border-bottom: 2px dashed #c8b86e;
+#sobre {
+  background: var(--bege);
+  max-width: 100%;
+  padding: 60px 20px;
 }
 
-.sobre-titulo h2 {
-    font-size: 3rem;
-    font-weight: 900;
-    color: #3b2a0e;
-    letter-spacing: 4px;
-    margin-bottom: 30px;
+#sobre .inner { 
+  max-width: 900px; 
+  margin: 0 auto; 
 }
 
-.sobre-conteudo {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
+.importancia-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 24px;
 }
 
-.sobre-img img {
-    width: 280px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 3px solid #c8b86e;
+@media (max-width: 600px) {
+  .importancia-grid { 
+    grid-template-columns: 1fr; 
+  }
 }
 
-.sobre-texto h3 {
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #3b2a0e;
-    margin-bottom: 14px;
+.importancia-item {
+  background: var(--branco);
+  border-radius: 8px;
+  padding: 20px 24px;
+  border-top: 4px solid var(--verde-medio);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-.sobre-texto ul {
-    padding-left: 20px;
-    margin-bottom: 16px;
+.importancia-item .icon { 
+  font-size: 2rem; 
+  margin-bottom: 8px; 
 }
 
-.sobre-texto ul li {
-    font-size: 0.92rem;
-    line-height: 1.8;
-    text-align: justify;
+.importancia-item p { 
+  font-size: 0.95rem; 
+  margin: 0; 
 }
 
-.sobre-texto p {
-    font-size: 0.92rem;
-    line-height: 1.8;
-    text-align: justify;
+.sobre-extra {
+  max-width: 900px;
+  margin: 40px auto 0;
+  background: var(--verde-escuro);
+  color: var(--creme);
+  border-radius: 8px;
+  padding: 32px 36px;
+  font-size: 1.05rem;
+  line-height: 1.9;
 }
 
 /* ── DESTAQUES ── */
-.secao-destaques {
-    background-color: #e8dfc0;
-    padding: 50px 60px;
-    border-bottom: 2px dashed #c8b86e;
+#destaques {
+  max-width: 100%;
+  padding: 60px 20px;
+  background: var(--creme);
 }
 
-.secao-destaques h2 {
-    font-size: 3rem;
-    font-weight: 900;
-    letter-spacing: 4px;
-    color: #3b2a0e;
-    margin-bottom: 30px;
+#destaques .inner { 
+  max-width: 900px; 
+  margin: 0 auto; 
 }
 
-.destaques-grid {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+.destaque-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
 }
 
-.destaque-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+.destaque-card {
+  background: var(--branco);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  border-bottom: 4px solid var(--dourado);
+  transition: transform 0.2s;
 }
 
-.destaque-item img {
-    width: 150px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 3px solid #c8b86e;
+.destaque-card:hover { 
+  transform: translateY(-4px); 
 }
 
-.destaque-item span {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #3b2a0e;
-    text-align: center;
+.destaque-card .card-top {
+  background: var(--verde-escuro);
+  padding: 28px 20px;
+  text-align: center;
+  font-size: 3rem;
 }
 
-/* ── SEÇÕES DE PRODUTO ── */
-.secao-produto {
-    background-color: #f5f0e1;
-    padding: 50px 60px;
-    border-bottom: 2px dashed #c8b86e;
+.destaque-card .card-body {
+  padding: 20px;
 }
 
-.secao-produto.invertida {
-    background-color: #ede4c5;
+.destaque-card h3 {
+  color: var(--dourado);
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.produto-titulo {
-    text-align: center;
-    margin-bottom: 30px;
-    padding-bottom: 16px;
-    border-bottom: 2px dashed #c8b86e;
+.destaque-card p { 
+  font-size: 0.92rem; 
+  margin: 0; 
 }
 
-.produto-titulo h2 {
-    font-size: 2.6rem;
-    font-weight: 900;
-    letter-spacing: 4px;
-    line-height: 1.2;
-    color: #3b2a0e;
+/* ── SEÇÕES DETALHADAS DOS PRODUTOS ── */
+.produto-section {
+  max-width: 100%;
+  padding: 60px 20px;
 }
 
-.produto-conteudo {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
-    flex-wrap: wrap;
+.produto-section:nth-child(even) {
+  background: var(--bege);
 }
 
-.produto-conteudo img {
-    width: 260px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 3px solid #c8b86e;
-    flex-shrink: 0;
+.produto-section .inner {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.produto-texto {
-    flex: 1;
-    min-width: 200px;
-    font-size: 0.92rem;
-    line-height: 1.8;
-    text-align: justify;
-    color: #3b2a0e;
+.produto-section h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  border: none;
+  padding: 0;
+  margin-bottom: 10px;
+  color: var(--verde-escuro);
 }
 
-.produto-texto h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    text-decoration: underline;
+.produto-section .produto-divider {
+  width: 60px;
+  height: 4px;
+  background: var(--dourado);
+  margin: 0 auto 30px;
+  border-radius: 2px;
 }
 
-.produto-texto h4 {
-    font-size: 1rem;
-    font-weight: 700;
-    margin-bottom: 10px;
+.produto-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
 }
 
-.produto-texto p {
-    margin-bottom: 12px;
+@media (max-width: 620px) {
+  .produto-cols { 
+    grid-template-columns: 1fr; 
+  }
 }
 
-.produto-texto ul {
-    padding-left: 18px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.produto-cols .col-icon {
+  text-align: center;
+  font-size: 6rem;
+  line-height: 1;
+  padding-top: 10px;
 }
 
-.destaque-box {
-    background-color: rgba(200, 184, 110, 0.2);
-    border-left: 4px solid #c8b86e;
-    padding: 16px 20px;
-    border-radius: 6px;
+ul.beneficios {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+ul.beneficios li {
+  padding: 6px 0 6px 24px;
+  position: relative;
+  font-size: 0.93rem;
+}
+
+ul.beneficios li::before {
+  content: '🐝';
+  position: absolute;
+  left: 0;
+  font-size: 0.8rem;
+  top: 8px;
 }
 
 /* ── RODAPÉ ── */
 footer {
-    background-color: #3b2a0e;
-    color: #f5f0e1;
-    padding: 30px 60px 20px;
-    text-align: center;
+  background: var(--verde-escuro);
+  color: var(--bege);
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
 }
 
-.footer-conteudo {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
+footer .footer-bee { 
+  font-size: 1.6rem; 
+  margin-bottom: 8px; 
 }
 
-.footer-conteudo p {
-    font-size: 0.95rem;
-    color: #c8b86e;
+footer a { 
+  color: var(--dourado-claro); 
+  text-decoration: none; 
 }
 
-.footer-base p {
-    font-size: 0.8rem;
-    color: #a08c5a;
-    border-top: 1px solid #5a3e1b;
-    padding-top: 16px;
+.footer-copyright {
+  margin-top: 10px; 
+  font-size: 0.8rem; 
+  color: var(--bege); 
+  opacity: 0.7;
+}
+
+/* ── DIVISOR DECORATIVO ── */
+.honey-divider {
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--dourado);
+  letter-spacing: 6px;
+  padding: 10px 0;
+  background: var(--verde-escuro);
 }
