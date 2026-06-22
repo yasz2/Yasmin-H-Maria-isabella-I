@@ -1,17 +1,256 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apicultura Cesc</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apicultura CESC</title>
+  <link rel="stylesheet" href="estilo.css" />
 </head>
 <body>
-    <header>
-        <img src="imagem cabeçalho.png" alt="">
-        <h1>Apicultura Cesc</h1>
-        <p>home</p>
-        <p>sobre</p>
-        <p>destaques</p>
-    </header>
+
+<!-- HEADER -->
+<header>
+  <h1>Apicultura</h1>
+  <p class="subtitulo">CESC</p>
+</header>
+
+<!-- NAV -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#destaques">Destaques</a>
+</nav>
+
+<!-- ===== HOME ===== -->
+<section id="home">
+  <div class="texto">
+    <h2>🌿 O QUE É APICULTURA?</h2>
+    <p>
+      A apicultura é a ciência e a técnica de criação de abelhas com ferrão (gênero <em>Apis</em>).
+      Seu objetivo é o manejo racional desses insetos para a produção de
+      <strong>mel</strong>, <strong>cera</strong>, <strong>própolis</strong>,
+      <strong>pólen</strong>, <strong>geleia real</strong> e <strong>apitoxina</strong>,
+      além de desempenhar um papel ecológico fundamental na <strong>polinização das plantas</strong>.
+    </p>
+  </div>
+  <div class="imagem">
+    <img src="img9_png.png" alt="Abelha polinizando flor amarela" />
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ===== SOBRE ===== -->
+<section id="sobre">
+  <h2 class="section-title">Sobre</h2>
+  <div class="sobre-grid">
+    <div class="sobre-imagem">
+      <img src="img9_png.png" alt="Abelha na flor" />
+    </div>
+    <div>
+      <h3>Importância das abelhas</h3>
+      <ul>
+        <li>As abelhas são vitais para a sobrevivência do planeta.</li>
+        <li>Responsáveis pela polinização de quase 90% das plantas silvestres.</li>
+        <li>Garantem cerca de 35% das culturas agrícolas globais.</li>
+        <li>Contribuem para a segurança alimentar da humanidade.</li>
+        <li>Mantêm o equilíbrio dos ecossistemas.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="sobre-extra">
+    Ao transferirem o pólen entre as flores, as abelhas permitem a reprodução de milhares de
+    espécies vegetais. Essas plantas servem de abrigo e alimento para diversos outros animais,
+    sustentando a cadeia alimentar.
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ===== DESTAQUES ===== -->
+<section id="destaques">
+  <h2 class="section-title">Destaques</h2>
+  <div class="destaques-grid">
+
+    <div class="card">
+      <div class="card-img"><img src="img10_png.png" alt="Colheita de mel" /></div>
+      <h3>Colheita de Mel</h3>
+      <p>O mel é colhido diretamente dos favos e é rico em antioxidantes, vitaminas e minerais.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img"><img src="img6_png.png" alt="Própolis" /></div>
+      <h3>Própolis</h3>
+      <p>Resina natural com poderosas propriedades antioxidantes, antibacterianas e cicatrizantes.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img"><img src="img3_png.png" alt="Apitoxina" /></div>
+      <h3>Apitoxina</h3>
+      <p>Veneno das abelhas com aplicações terapêuticas, analgésicas e anti-inflamatórias.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img"><img src="img1_png.png" alt="Cera de abelha" /></div>
+      <h3>Cera de Abelha</h3>
+      <p>Usada na cosmética, produção artesanal e conservação de alimentos.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img"><img src="img2_png.png" alt="Geléia Real" /></div>
+      <h3>Geléia Real</h3>
+      <p>Secretada pelas abelhas nutrizes, é rica em vitaminas do complexo B e aminoácidos.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-img"><img src="img11_png.png" alt="Própolis na colmeia" /></div>
+      <h3>Pólen & Colmeia</h3>
+      <p>A colmeia é o centro de toda a produção apícola, onde as abelhas trabalham em harmonia.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== COLHEITA DO MEL ===== -->
+<div class="banner-secao"><h2>Colheita do Mel</h2></div>
+<section class="produto-secao" id="mel-sec">
+  <div class="produto">
+    <div class="produto-img">
+      <img src="img10_png.png" alt="Colheita do mel - favo sendo cortado" />
+    </div>
+    <div class="produto-txt">
+      <h3>O Mel</h3>
+      <p>
+        O mel é um alimento funcional versátil, rico em antioxidantes, vitaminas e minerais.
+        É amplamente utilizado para aliviar a tosse e a dor de garganta, cicatrizar feridas
+        e queimaduras leves, fornecer energia rápida (pré/pós-treino) e melhorar a digestão.
+      </p>
+      <div class="tecnicas">
+        <h4>Técnicas de Coleta do Mel</h4>
+        <p>
+          Existem dois métodos principais: <strong>sugar</strong> — usando um sugador e uma
+          maquininha; e <strong>virar</strong> — retirando o mel dos potes diretamente com um
+          recipiente estéril (de plástico ou de vidro).
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CERA DE ABELHA ===== -->
+<div class="banner-secao"><h2>Cera de Abelha</h2></div>
+<section class="produto-secao" id="cera-sec">
+  <div class="produto invertido">
+    <div class="produto-img">
+      <img src="img1_png.png" alt="Blocos de cera de abelha" />
+    </div>
+    <div class="produto-txt">
+      <h3>Cera de Abelha</h3>
+      <p>
+        A cera de abelha é produzida pelas próprias abelhas operárias mais jovens, que reduzem
+        o mel e o transformam em cera por meio de glândulas no abdômen. Para extraí-la, os
+        apicultores derretem os favos antigos ou os "opérculos" usando calor e água. A cera
+        derretida é filtrada para remover impurezas.
+      </p>
+      <p style="margin-top:12px;">
+        É um ingrediente natural super versátil, amplamente utilizada para hidratação e
+        cicatrização na cosmética, produção artesanal e conservação de alimentos.
+      </p>
+      <div class="extra-img">
+        <img src="img4_png.png" alt="Velas artesanais de cera de abelha" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRÓPOLIS ===== -->
+<div class="banner-secao"><h2>Própolis</h2></div>
+<section class="produto-secao" id="propolis-sec">
+  <div class="produto">
+    <div class="produto-img">
+      <img src="img6_png.png" alt="Própolis em pó e extrato líquido" />
+    </div>
+    <div class="produto-txt">
+      <h3>Própolis</h3>
+      <p>
+        A própolis é uma resina natural produzida pelas abelhas operárias a partir da coleta de
+        brotos, flores e cascas de plantas. Na colmeia, as abelhas maturam essa substância com
+        suas próprias enzimas salivares e cera, tornando-a antiséptica e cicatrizante.
+      </p>
+      <p style="margin-top:12px;">
+        Altamente valorizada, possui poderosas propriedades antioxidantes, anti-inflamatórias,
+        antibacterianas e cicatrizantes, sendo excelente para fortalecer a imunidade e aliviar
+        infecções respiratórias.
+      </p>
+      <div class="extra-img">
+        <img src="img11_png.png" alt="Própolis natural na colmeia" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GELÉIA REAL ===== -->
+<div class="banner-secao"><h2>Geléia Real</h2></div>
+<section class="produto-secao" id="geleia-sec">
+  <div class="produto invertido">
+    <div class="produto-img">
+      <img src="img2_png.png" alt="Geléia real em pote de vidro com flores" />
+    </div>
+    <div class="produto-txt">
+      <h3>Geléia Real</h3>
+      <p>
+        A geléia real é uma secreção leitosa e ácida produzida pelas abelhas jovens. Na colmeia,
+        é o alimento exclusivo da abelha rainha, conferindo-lhe maior longevidade e capacidade
+        reprodutiva. Rica em vitaminas do complexo B, aminoácidos e minerais.
+      </p>
+      <ul>
+        <li>Ação antioxidante e anti-inflamatória</li>
+        <li>Fortalece a imunidade</li>
+        <li>Auxilia na hidratação e proteção do organismo</li>
+        <li>Apoia a saúde da pele e reduz rugas</li>
+        <li>Melhora a disposição física e mental</li>
+      </ul>
+      <div class="extra-img">
+        <img src="img7_png.png" alt="Geléia real em pote pequeno com flores" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== APITOXINA ===== -->
+<div class="banner-secao"><h2>Apitoxina</h2></div>
+<section class="produto-secao" id="apitoxina-sec">
+  <div class="produto">
+    <div class="produto-img">
+      <img src="img3_png.png" alt="Abelha aplicando veneno" />
+    </div>
+    <div class="produto-txt">
+      <h3>Apitoxina</h3>
+      <p>
+        A apitoxina, conhecida popularmente como veneno de abelha, é uma substância natural
+        produzida pelas abelhas operárias (<em>Apis mellifera</em>). É amplamente utilizada
+        em terapias alternativas, cosméticos e pesquisas científicas.
+      </p>
+      <ul>
+        <li><strong>Alívio de dores</strong> — massagens para artrite e reumatismo</li>
+        <li><strong>Ação anti-inflamatória</strong> — alto potencial comprovado</li>
+        <li><strong>Cosmética</strong> — presente em cremes hidratantes e séruns</li>
+        <li><strong>Energizante</strong> — melhora a circulação local e a pele</li>
+      </ul>
+      <div class="extra-img">
+        <img src="img8_png.png" alt="Ferrão de abelha com apitoxina" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RODAPÉ ===== -->
+<footer>
+  <div class="contato">
+    📧 apiculturacesc@email.com &nbsp;|&nbsp; 📞 FONE: (41) XXX-XXXX
+  </div>
+  <p>© 2024 Apicultura CESC · Todos os direitos reservados</p>
+</footer>
+
 </body>
 </html>
