@@ -1,0 +1,85 @@
+/* ── TOKENS ── */
+:root {
+  --verde-escuro: #3b4a2f;
+  --verde-medio: #5a6e3c;
+  --dourado: #c9a227;
+  --dourado-claro: #e8c84a;
+  --creme: #f5f0e0;
+  --bege: #ede0c0;
+  --texto: #2c2a1e;
+  --branco: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background: var(--creme);
+  color: var(--texto);
+  line-height: 1.7;
+}
+
+/* ── HEADER ── */
+header {
+  background: var(--verde-escuro);
+  text-align: center;
+  padding: 28px 20px 8px;
+}
+
+.site-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--dourado-claro);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.site-subtitle {
+  font-size: 1rem;
+  color: var(--bege);
+  letter-spacing: 6px;
+  margin-bottom: 18px;
+}
+
+/* decoração de abelhas no header */
+.bee-deco {
+  font-size: 1.4rem;
+  letter-spacing: 8px;
+  color: var(--dourado);
+  margin-bottom: 10px;
+}
+
+/* ── NAV ── */
+nav {
+  background: var(--verde-medio);
+  display: flex;
+  justify-content: center;
+  gap: 0;
+}
+
+nav a {
+  color: var(--creme);
+  text-decoration: none;
+  padding: 12px 36px;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-right: 1px solid rgba(255,255,255,0.2);
+  transition: background 0.2s, color 0.2s;
+}
+
+nav a:last-child {
+  border-right: none;
+}
+
+nav a:hover {
+  background: var(--dourado);
+  color: var(--verde-escuro);
+}
+
+/* Continue colando aqui todo o restante do CSS exatamente
+   como está dentro da sua tag <style> */
