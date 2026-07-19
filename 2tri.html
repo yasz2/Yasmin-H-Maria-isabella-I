@@ -275,19 +275,5 @@
   </div>
 </footer>
 
-<script>
-  // Realce do link ativo no menu principal conforme a rolagem
-  const secoes = ['home', 'sobre', 'destaques'];
-  const links = document.querySelectorAll('.site-nav__link');
-  window.addEventListener('scroll', () => {
-    let atual = secoes[0];
-    for (const id of secoes) {
-      const el = document.getElementById(id);
-      if (el && window.scrollY + 120 >= el.offsetTop) atual = id;
-    }
-    links.forEach(l => l.classList.toggle('site-nav__link--active', l.getAttribute('href') === '#' + atual));
-  });
-</script>
-
 </body>
 </html>
