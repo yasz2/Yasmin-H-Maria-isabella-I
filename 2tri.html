@@ -1,264 +1,415 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Apicultura CESC</title>
-  <link rel="stylesheet" href="2tri.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apicultura CESC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="bee-deco">🐝 🌸 🍯 🌸 🐝</div>
-    <div class="site-title">Apicultura</div>
-    <div class="site-subtitle">C E S C</div>
-  </header>
+<!-- ============ SVG SYMBOL LIBRARY ============ -->
+<svg class="sprites" xmlns="http://www.w3.org/2000/svg">
+<defs>
 
-  <!-- NAVEGAÇÃO -->
-  <nav>
-    <a href="#home">🏠 Home</a>
-    <a href="#sobre">🌿 Sobre</a>
-    <a href="#destaques">⭐ Destaques</a>
-  </nav>
+<symbol id="ic-bee" viewBox="0 0 100 100">
+  <ellipse cx="50" cy="54" rx="30" ry="17" fill="#f2b632"/>
+  <path d="M20 47 A30 17 0 0 1 80 47 L74 50 A25 12 0 0 0 26 50 Z" fill="#3a2a12"/>
+  <path d="M20 61 A30 17 0 0 0 80 61 L74 58 A25 12 0 0 1 26 58 Z" fill="#3a2a12"/>
+  <circle cx="50" cy="30" r="14" fill="#3a2a12"/>
+  <ellipse cx="30" cy="38" rx="16" ry="10" fill="#eaf3ff" opacity=".85" transform="rotate(-25 30 38)"/>
+  <ellipse cx="70" cy="38" rx="16" ry="10" fill="#eaf3ff" opacity=".85" transform="rotate(25 70 38)"/>
+  <path d="M50 16 Q46 6 38 8" stroke="#3a2a12" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M50 16 Q54 6 62 8" stroke="#3a2a12" stroke-width="3" fill="none" stroke-linecap="round"/>
+</symbol>
 
-  <!-- HOME -->
-  <section id="home">
-    <div class="home-inner">
-      <div class="emojis">🐝 🍯 🌸</div>
-      <h1>Apicultura CESC</h1>
-      <p class="tagline">
-        A ciência e a arte da criação de abelhas, em harmonia com a natureza.
-        Mel, cera, própolis, pólen, geleia real e apitoxina — da colmeia para você.
-      </p>
-      <div class="hero-badge">🌼 Natural · Sustentável · Nutritivo 🌼</div>
-    </div>
-  </section>
+<symbol id="ic-flower" viewBox="0 0 100 100">
+  <g fill="#f4c9d6">
+    <ellipse cx="50" cy="26" rx="16" ry="20"/>
+    <ellipse cx="50" cy="74" rx="16" ry="20"/>
+    <ellipse cx="26" cy="50" rx="20" ry="16"/>
+    <ellipse cx="74" cy="50" rx="20" ry="16"/>
+  </g>
+  <circle cx="50" cy="50" r="14" fill="#e7a53b"/>
+</symbol>
 
-  <div class="honey-divider">✦ ✦ ✦</div>
+<symbol id="ic-honeycomb" viewBox="0 0 100 100">
+  <g fill="none" stroke="#b8791f" stroke-width="4">
+    <polygon points="50,8 72,21 72,47 50,60 28,47 28,21"/>
+    <polygon points="22,44 44,57 44,83 22,96 0,83 0,57" transform="translate(6,0)"/>
+    <polygon points="78,44 100,57 100,83 78,96 56,83 56,57" transform="translate(-6,0)"/>
+  </g>
+  <g fill="#f0b545" opacity=".55">
+    <polygon points="50,8 72,21 72,47 50,60 28,47 28,21"/>
+  </g>
+</symbol>
 
-  <!-- O QUE É APICULTURA (dentro do home) -->
-  <section>
-    <div class="info-card">
-      <h3>🐝 O que é Apicultura?</h3>
-      <p>
-        A apicultura é a ciência e a técnica de criação de abelhas com ferrão (gênero <em>Apis</em>).
-        Seu objetivo é o manejo racional desses insetos para a produção de
-        <span class="destaque">mel</span>,
-        <span class="destaque">cera</span>,
-        <span class="destaque">própolis</span>,
-        <span class="destaque">pólen</span>,
-        <span class="destaque">geleia real</span> e
-        <span class="destaque">apitoxina</span>,
-        além de desempenhar um papel ecológico fundamental na <strong>polinização das plantas</strong>.
-      </p>
-    </div>
-  </section>
+<symbol id="ic-house" viewBox="0 0 100 100">
+  <path d="M50 12 L92 46 L82 46 L82 90 L18 90 L18 46 L8 46 Z"/>
+  <rect x="42" y="60" width="16" height="30" fill="#3d6640"/>
+</symbol>
 
-  <!-- SOBRE -->
-  <div id="sobre">
-    <div class="inner">
-      <span class="section-label">🌿 Seção</span>
-      <h2>Sobre</h2>
+<symbol id="ic-play" viewBox="0 0 100 100">
+  <polygon points="22,10 90,50 22,90"/>
+</symbol>
 
-      <h3>Importância das Abelhas</h3>
+<symbol id="ic-honeyjar" viewBox="0 0 100 100">
+  <rect x="26" y="34" width="48" height="52" rx="10" fill="#f0b545"/>
+  <rect x="30" y="14" width="40" height="22" rx="6" fill="#b8791f"/>
+  <rect x="34" y="8" width="32" height="10" rx="4" fill="#7a5312"/>
+  <path d="M26 52 Q50 60 74 52" stroke="#b8791f" stroke-width="3" fill="none"/>
+</symbol>
 
-      <div class="importancia-grid">
-        <div class="importancia-item">
-          <div class="icon">🌸</div>
-          <p>As abelhas são responsáveis pela polinização de quase <strong>90% das plantas silvestres</strong> e cerca de <strong>36% das culturas agrícolas</strong> globais.</p>
-        </div>
-        <div class="importancia-item">
-          <div class="icon">🍎</div>
-          <p>Garantem a <strong>segurança alimentar</strong> da humanidade e a manutenção dos ecossistemas ao longo do planeta.</p>
-        </div>
-        <div class="importancia-item">
-          <div class="icon">🌿</div>
-          <p>As plantas polinizadas servem de <strong>abrigo e alimento</strong> para diversos outros animais, sustentando toda a cadeia alimentar.</p>
-        </div>
-        <div class="importancia-item">
-          <div class="icon">🌍</div>
-          <p>Ao transferirem o pólen entre flores, permitem a <strong>reprodução de milhares de espécies vegetais</strong> essenciais para a vida.</p>
-        </div>
-      </div>
-    </div>
+<symbol id="ic-candle" viewBox="0 0 100 100">
+  <rect x="40" y="30" width="20" height="60" rx="4" fill="#f0b545"/>
+  <rect x="36" y="86" width="28" height="8" rx="2" fill="#b8791f"/>
+  <line x1="50" y1="30" x2="50" y2="18" stroke="#5a3d1a" stroke-width="3"/>
+  <path d="M50 6 Q56 14 50 20 Q44 14 50 6 Z" fill="#e7772b"/>
+</symbol>
 
-    <div class="sobre-extra">
-      Ao transferirem o pólen entre as flores, as abelhas permitem a reprodução de milhares de espécies vegetais.
-      Essas plantas servem de abrigo e alimento para diversos outros animais, sustentando a cadeia alimentar
-      e garantindo o equilíbrio dos nossos ecossistemas.
-    </div>
+<symbol id="ic-dropper" viewBox="0 0 100 100">
+  <rect x="38" y="40" width="24" height="46" rx="8" fill="#c98a1f"/>
+  <rect x="42" y="16" width="16" height="28" fill="#7a5312"/>
+  <rect x="40" y="8" width="20" height="10" rx="3" fill="#3a2a12"/>
+  <circle cx="50" cy="63" r="6" fill="#f0b545"/>
+</symbol>
+
+<symbol id="ic-royaljelly" viewBox="0 0 100 100">
+  <rect x="28" y="38" width="44" height="48" rx="12" fill="#fff6df"/>
+  <rect x="28" y="38" width="44" height="48" rx="12" fill="none" stroke="#e0a530" stroke-width="4"/>
+  <rect x="34" y="18" width="32" height="22" rx="6" fill="#e0a530"/>
+  <ellipse cx="50" cy="60" rx="14" ry="10" fill="#f6e6b0"/>
+</symbol>
+
+<symbol id="ic-sting" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="38" fill="none" stroke="#e7772b" stroke-width="4" opacity=".6"/>
+  <use href="#ic-bee" x="15" y="15" width="70" height="70"/>
+</symbol>
+
+<symbol id="ic-envelope" viewBox="0 0 100 100">
+  <rect x="8" y="22" width="84" height="56" rx="8"/>
+  <path d="M12 26 L50 56 L88 26" fill="none" stroke="#2f4a2f" stroke-width="6"/>
+</symbol>
+
+<symbol id="ic-phone" viewBox="0 0 100 100">
+  <path d="M25 12 C15 12 12 20 14 30 C18 50 35 75 55 84 C65 88 78 84 84 76 L88 66 C90 60 86 54 80 52 L66 46 C60 44 56 46 54 52 L50 60 C40 54 30 44 26 34 L34 30 C40 28 42 24 40 18 L34 6 C32 0 26 -2 20 2 Z" transform="translate(4,4) scale(.92)"/>
+</symbol>
+
+<symbol id="ic-pin" viewBox="0 0 100 100">
+  <path d="M50 6 C28 6 12 22 12 44 C12 70 50 94 50 94 C50 94 88 70 88 44 C88 22 72 6 50 6 Z"/>
+  <circle cx="50" cy="44" r="16" fill="#2f4a2f"/>
+</symbol>
+
+</defs>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header id="home">
+  <svg class="deco" style="top:20px; left:24px;" width="46" height="46"><use href="#ic-flower"/></svg>
+  <svg class="deco" style="top:70px; right:40px;" width="40" height="40"><use href="#ic-bee"/></svg>
+  <svg class="deco" style="bottom:10px; left:60px;" width="30" height="30"><use href="#ic-flower"/></svg>
+
+  <div class="wrap">
+    <div class="brand">APICULTURA<br>CESC</div>
+    <nav class="mainnav">
+      <a href="#home" class="active">Home</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#destaques">Destaques</a>
+    </nav>
   </div>
 
-  <div class="honey-divider">✦ ✦ ✦</div>
-
-  <!-- DESTAQUES -->
-  <div id="destaques">
-    <div class="inner">
-      <span class="section-label">⭐ Seção</span>
-      <h2>Destaques</h2>
-
-      <div class="destaque-cards">
-        <div class="destaque-card">
-          <div class="card-top">🍯</div>
-          <div class="card-body">
-            <h3>Colheita de Mel</h3>
-            <p>O mel é colhido diretamente dos favos, rico em antioxidantes, vitaminas e minerais.</p>
-          </div>
-        </div>
-        <div class="destaque-card">
-          <div class="card-top">🟤</div>
-          <div class="card-body">
-            <h3>Própolis</h3>
-            <p>Resina natural com poderosas propriedades antioxidantes, anti-inflamatórias e antibacterianas.</p>
-          </div>
-        </div>
-        <div class="destaque-card">
-          <div class="card-top">👑</div>
-          <div class="card-body">
-            <h3>Apitoxina</h3>
-            <p>Veneno das abelhas operárias com alto potencial anti-inflamatório e uso na terapia alternativa.</p>
-          </div>
-        </div>
-        <div class="destaque-card">
-          <div class="card-top">🕯️</div>
-          <div class="card-body">
-            <h3>Cera de Abelha</h3>
-            <p>Produzida pelas abelhas jovens, usada em cosméticos, artesanato e conservação de alimentos.</p>
-          </div>
-        </div>
-        <div class="destaque-card">
-          <div class="card-top">✨</div>
-          <div class="card-body">
-            <h3>Geleia Real</h3>
-            <p>Secreção da abelha rainha, rica em vitaminas do complexo B, aminoácidos e minerais.</p>
-          </div>
-        </div>
+  <div class="wrap hero">
+    <div class="hero-grid">
+      <div class="hero-frame">
+        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+          <rect width="300" height="300" fill="#eaf2dc"/>
+          <circle cx="230" cy="60" r="40" fill="#f6e6a8"/>
+          <path d="M0 200 Q75 160 150 200 T300 190 V300 H0 Z" fill="#9cc57e"/>
+          <path d="M0 230 Q75 200 150 235 T300 220 V300 H0 Z" fill="#79a463"/>
+          <g transform="translate(90,120)"><use href="#ic-flower" width="70" height="70"/></g>
+          <g transform="translate(150,150)"><use href="#ic-flower" width="60" height="60"/></g>
+          <g transform="translate(120,90) scale(1.1)"><use href="#ic-bee" width="60" height="60"/></g>
+        </svg>
       </div>
-    </div>
-  </div>
-
-  <div class="honey-divider">✦ ✦ ✦</div>
-
-  <!-- COLHEITA DO MEL -->
-  <div class="produto-section">
-    <div class="inner">
-      <h2>Colheita do Mel</h2>
-      <div class="produto-divider"></div>
-      <div class="produto-cols">
-        <div>
-          <h3>Técnicas de Coleta do Mel</h3>
-          <p>Existem dois métodos principais: <strong>sugar o virar</strong> — sugar mel dos potes com auxílio de um sugador — e <strong>colher o mel</strong>, retirando diretamente dos favos com recipiente estéril.</p>
-          <p>O mel é um alimento funcional versátil, rico em antioxidantes, vitaminas e minerais. É amplamente utilizado para:</p>
-          <ul class="beneficios">
-            <li>Aliviar a tosse e dor de garganta</li>
-            <li>Cicatrizar feridas e queimaduras leves</li>
-            <li>Fornecer energia rápida (pré e pós-treino)</li>
-            <li>Melhorar a digestão</li>
-          </ul>
-        </div>
-        <div class="col-icon">🍯</div>
+      <div class="hero-text">
+        <h2><svg width="26" height="26"><use href="#ic-bee"/></svg> O que é apicultura?</h2>
+        <p>
+          A apicultura é a ciência e a técnica de criação de abelhas com ferrão (gênero <b class="plain">Apis</b>).
+          Seu objetivo é o manejo racional desses insetos para a produção de
+          <strong>mel, cera, própolis, pólen, geleia real</strong> e <strong>apitoxina</strong>,
+          além de desempenhar um papel ecológico fundamental na <b class="plain">polinização das plantas</b>.
+        </p>
       </div>
     </div>
   </div>
 
-  <!-- CERA DE ABELHA -->
-  <div class="produto-section">
-    <div class="inner">
-      <h2>Cera de Abelha</h2>
-      <div class="produto-divider"></div>
-      <div class="produto-cols">
-        <div class="col-icon">🕯️</div>
-        <div>
-          <p>A cera de abelha é produzida pelas abelhas operárias mais jovens, que reduzem o mel e o transformam em cera por meio de glândulas no abdômen. Para extraí-la, os apicultores derretem os favos antigos usando calor e água.</p>
-          <p>A cera é um ingrediente natural super versátil, amplamente utilizada para:</p>
-          <ul class="beneficios">
-            <li>Hidratação e cicatrização na cosmética</li>
-            <li>Produção artesanal (velas, embalagens)</li>
-            <li>Conservação de alimentos</li>
-            <li>Lubrificante natural em marcenaria</li>
-          </ul>
-        </div>
+  <svg class="wave wave-into-green" viewBox="0 0 1200 60" preserveAspectRatio="none">
+    <path d="M0,30 C150,60 300,0 450,20 C600,40 750,60 900,30 C1050,0 1150,20 1200,30 L1200,60 L0,60 Z" fill="#aed093"/>
+  </svg>
+</header>
+
+<!-- ============ SOBRE ============ -->
+<section id="sobre" class="green-band">
+  <div class="wrap">
+    <div class="band-header">
+      <div class="band-title">
+        <svg width="44" height="44"><use href="#ic-honeycomb"/></svg>
+        <h2>Sobre</h2>
+      </div>
+      <div class="navicons">
+        <a href="#home" aria-label="Início"><svg><use href="#ic-house"/></svg></a>
+        <a href="#destaques" aria-label="Próximo"><svg><use href="#ic-play"/></svg></a>
       </div>
     </div>
-  </div>
 
-  <!-- PRÓPOLIS -->
-  <div class="produto-section">
-    <div class="inner">
-      <h2>Própolis</h2>
-      <div class="produto-divider"></div>
-      <div class="produto-cols">
-        <div>
-          <p>A própolis é uma resina natural produzida pelas abelhas a partir da coleta de brotos, flores e cascas de plantas. Na colmeia, as abelhas maturam essa mistura com suas próprias enzimas salivares e cera.</p>
-          <p>É altamente valorizada por suas poderosas propriedades:</p>
-          <ul class="beneficios">
-            <li>Antioxidante — combate radicais livres</li>
-            <li>Anti-inflamatória — auxilia na recuperação</li>
-            <li>Antibacteriana — protege e esteriliza</li>
-            <li>Cicatrizante — fortalece a imunidade</li>
-            <li>Excelente contra infecções respiratórias</li>
-          </ul>
-        </div>
-        <div class="col-icon">🟤</div>
+    <div class="sobre-grid">
+      <div class="sobre-photo">
+        <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
+          <rect width="300" height="220" fill="#eede84"/>
+          <circle cx="230" cy="40" r="34" fill="#f7e9a8"/>
+          <path d="M0 140 Q75 110 150 140 T300 130 V220 H0 Z" fill="#c7de60"/>
+          <g transform="translate(120,70) scale(1.6)"><use href="#ic-bee" width="60" height="60"/></g>
+        </svg>
+      </div>
+      <div>
+        <h3>Importância das abelhas</h3>
+        <p>
+          As abelhas são vitais para a sobrevivência do planeta. Elas são responsáveis pela polinização
+          de quase 90% das plantas silvestres e de cerca de 35% das culturas agrícolas globais,
+          garantindo a segurança alimentar da humanidade e a manutenção dos ecossistemas.
+        </p>
       </div>
     </div>
-  </div>
 
-  <!-- GELEIA REAL -->
-  <div class="produto-section">
-    <div class="inner">
-      <h2>Geleia Real</h2>
-      <div class="produto-divider"></div>
-      <div class="produto-cols">
-        <div class="col-icon">👸</div>
-        <div>
-          <p>A geleia real é uma secreção leitosa e ácida produzida pelas abelhas. Na colmeia, é o alimento exclusivo da abelha rainha, conferindo-lhe maior longevidade e capacidade reprodutiva.</p>
-          <p>Principais benefícios:</p>
-          <ul class="beneficios">
-            <li>Ação antioxidante — combate o envelhecimento precoce</li>
-            <li>Anti-inflamatória — auxilia na revitalização do organismo</li>
-            <li>Apoio à saúde da pele — estimula produção de colágeno</li>
-            <li>Energia e vitalidade — combate a fadiga crônica</li>
-            <li>Melhora o raciocínio e a concentração</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- APITOXINA -->
-  <div class="produto-section">
-    <div class="inner">
-      <h2>Apitoxina</h2>
-      <div class="produto-divider"></div>
-      <div class="produto-cols">
-        <div>
-          <p>A apitoxina, conhecida popularmente como veneno de abelha, é uma substância natural produzida pelas abelhas operárias (<em>Apis mellifera</em>). É amplamente utilizada em terapias alternativas, cosméticos e pesquisas científicas por suas propriedades anti-inflamatórias, analgésicas e cicatrizantes.</p>
-          <p>Principais usos e benefícios:</p>
-          <ul class="beneficios">
-            <li>Alívio de dores musculares e nas articulações</li>
-            <li>Terapia alternativa para artrite e reumatismo</li>
-            <li>Ação anti-inflamatória com alto potencial</li>
-            <li>Cosmética — melhora a circulação e elasticidade da pele</li>
-            <li>Pesquisas sobre doenças neurológicas</li>
-          </ul>
-        </div>
-        <div class="col-icon">💉</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="honey-divider">✦ ✦ ✦</div>
-
-  <!-- RODAPÉ -->
-  <footer>
-    <div class="footer-bee">🐝</div>
-    <p>📞 Fone: (41) XXX-XXXX</p>
-    <p style="margin-top:10px; font-size:0.8rem; color: var(--bege); opacity: 0.7;">
-      © 2025 Apicultura CESC — Todos os direitos reservados
+    <p class="full-p">
+      Ao transferirem o pólen entre as flores, permitem a reprodução de milhares de espécies vegetais.
+      Essas plantas servem de abrigo e alimento para diversos outros animais, sustentando a cadeia alimentar.
     </p>
-  </footer>
+  </div>
+
+  <svg class="wave wave-into-cream" viewBox="0 0 1200 60" preserveAspectRatio="none" style="position:absolute; bottom:-1px; left:0;">
+    <path d="M0,30 C150,0 300,55 450,35 C600,15 750,5 900,30 C1050,55 1150,35 1200,30 L1200,60 L0,60 Z" fill="#f2ead0"/>
+  </svg>
+</section>
+
+<!-- ============ DESTAQUES ============ -->
+<section id="destaques" class="destaques">
+  <div class="wrap">
+    <div class="band-header">
+      <div class="band-title"><h2>Destaques</h2></div>
+      <div class="navicons">
+        <a href="#home" aria-label="Início"><svg><use href="#ic-house"/></svg></a>
+        <a href="#colheita" aria-label="Próximo"><svg><use href="#ic-play"/></svg></a>
+      </div>
+    </div>
+
+    <div class="highlights">
+      <a class="highlight" href="#colheita">
+        <div class="circle"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#f6e6a8"/><use href="#ic-honeyjar" width="70" height="70" x="15" y="15"/></svg></div>
+        <span>Colheita de mel</span>
+      </a>
+      <a class="highlight" href="#cera">
+        <div class="circle"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#f2ead0"/><use href="#ic-candle" width="70" height="70" x="15" y="15"/></svg></div>
+        <span>Cera de abelha</span>
+      </a>
+      <a class="highlight" href="#propolis">
+        <div class="circle"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#eede84"/><use href="#ic-dropper" width="70" height="70" x="15" y="15"/></svg></div>
+        <span>Própolis</span>
+      </a>
+      <a class="highlight" href="#geleia">
+        <div class="circle"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#f6f0dc"/><use href="#ic-royaljelly" width="70" height="70" x="15" y="15"/></svg></div>
+        <span>Geleia real</span>
+      </a>
+      <a class="highlight" href="#apitoxina">
+        <div class="circle"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#f9dcc4"/><use href="#ic-sting" width="70" height="70" x="15" y="15"/></svg></div>
+        <span>Apitoxina</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COLHEITA DO MEL ============ -->
+<section id="colheita" class="detail green">
+  <div class="wrap" style="position:relative;">
+    <div class="band-header">
+      <div class="band-title"><h2>Colheita do mel</h2></div>
+      <div class="navicons">
+        <a href="#home" aria-label="Início"><svg><use href="#ic-house"/></svg></a>
+        <a href="#cera" aria-label="Próximo"><svg><use href="#ic-play"/></svg></a>
+      </div>
+    </div>
+    <svg class="detail-icon" viewBox="0 0 100 100"><use href="#ic-honeyjar"/></svg>
+
+    <div class="detail-body single">
+      <div>
+        <p class="underline-title">Técnicas de coleta do mel</p>
+        <p>
+          Existem dois métodos principais para a colheita de mel: sugar e virar. No método de sugar,
+          o mel dos potes é coletado diretamente com o auxílio de um sugador e uma mangueira,
+          sendo transferido para um recipiente estéril, de plástico ou de vidro.
+        </p>
+        <p style="margin-top:14px;">
+          O mel é um alimento funcional versátil, rico em antioxidantes, vitaminas e minerais.
+          Ele é amplamente utilizado para <strong>aliviar a tosse e a dor de garganta</strong>,
+          <strong>cicatrizar feridas e queimaduras leves</strong>, <strong>fornecer energia rápida</strong>
+          (pré/pós-treino) e <strong>melhorar a digestão</strong>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERA DE ABELHA ============ -->
+<section id="cera" class="detail cream">
+  <div class="wrap" style="position:relative;">
+    <div class="band-header">
+      <div class="band-title"><h2>Cera de abelha</h2></div>
+      <div class="navicons">
+        <a href="#home" aria-label="Início"><svg><use href="#ic-house"/></svg></a>
+        <a href="#propolis" aria-label="Próximo"><svg><use href="#ic-play"/></svg></a>
+      </div>
+    </div>
+    <svg class="detail-icon" viewBox="0 0 100 100"><use href="#ic-candle"/></svg>
+
+    <div class="detail-body">
+      <p>
+        A cera de abelha é produzida pelas próprias abelhas operárias mais jovens, que reduzem o mel
+        e o transformam em cera por meio de glândulas no abdômen. Para extraí-la, os apicultores
+        derretem os favos antigos ou os "opérculos" (as tampinhas dos alvéolos de mel) usando calor
+        e água. A cera derretida é filtrada para remover impurezas e fica pronta para uso.
+      </p>
+      <p>
+        A cera de abelha é um ingrediente natural super versátil, amplamente utilizada para
+        <strong>hidratação e cicatrização na cosmética</strong>, <strong>produção artesanal</strong>
+        e <strong>conservação de alimentos</strong>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRÓPOLIS ============ -->
+<section id="propolis" class="detail green">
+  <div class="wrap" style="position:relative;">
+    <div class="band-header">
+      <div class="band-title"><h2>Própolis</h2></div>
+      <div class="navicons">
+        <a href="#home" aria-label="Início"><svg><use href="#ic-house"/></svg></a>
+        <a href="#geleia" aria-label="Próximo"><svg><use href="#ic-play"/></svg></a>
+      </div>
+    </div>
+    <svg class="detail-icon" viewBox="0 0 100 100"><use href="#ic-dropper"/></svg>
+
+    <div class="detail-body">
+      <p>
+        A própolis é uma resina natural produzida pelas abelhas a partir da coleta de brotos,
+        flores e cascas de plantas. Na colmeia, as abelhas misturam essa seiva com suas próprias
+        enzimas salivares e cera. O resultado é uma substância antisséptica e cicatrizante,
+        usada para proteger, vedar e esterilizar o ambiente.
+      </p>
+      <p>
+        Altamente valorizada, ela possui poderosas propriedades <strong>antioxidantes</strong>,
+        <strong>anti-inflamatórias</strong>, <strong>antibacterianas</strong> e <strong>cicatrizantes</strong>,
+        sendo excelente para fortalecer a imunidade e aliviar infecções respiratórias.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GELEIA REAL ============ -->
+<section id="geleia" class="detail cream">
+  <div class="wrap" style="position:relative;">
+    <div class="band-header">
+      <div class="band-title"><h2>Geleia real</h2></div>
+      <div class="navicons">
+        <a href="#home" aria-label="Início"><svg><use href="#ic-house"/></svg></a>
+        <a href="#apitoxina" aria-label="Próximo"><svg><use href="#ic-play"/></svg></a>
+      </div>
+    </div>
+    <svg class="detail-icon" viewBox="0 0 100 100"><use href="#ic-royaljelly"/></svg>
+
+    <div class="detail-body">
+      <p>
+        A geleia real é uma secreção leitosa e ácida produzida pelas abelhas jovens. Na colmeia,
+        é o alimento exclusivo da abelha-rainha, conferindo-lhe maior longevidade e capacidade
+        reprodutiva. Usada como suplemento, é rica em complexo B, aminoácidos e minerais,
+        valorizada por suas propriedades antioxidantes e energéticas.
+      </p>
+      <div>
+        <p class="underline-title">Principais benefícios</p>
+        <ul class="benefit-list">
+          <li><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="9"/></svg> Ação antioxidante e anti-inflamatória: ajuda no combate aos radicais livres e retarda o envelhecimento precoce.</li>
+          <li><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="9"/></svg> Fortalece a imunidade: contém substâncias que auxiliam na revitalização e proteção do organismo.</li>
+          <li><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="9"/></svg> Apoio à saúde da pele: estimula a produção de colágeno, ajudando a reduzir rugas.</li>
+          <li><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="9"/></svg> Energia e vitalidade: muito utilizada para combater a fadiga crônica, o esgotamento físico e melhorar a concentração.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APITOXINA ============ -->
+<section id="apitoxina" class="detail green">
+  <div class="wrap" style="position:relative;">
+    <div class="band-header">
+      <div class="band-title"><h2>Apitoxina</h2></div>
+      <div class="navicons">
+        <a href="#home" aria-label="Início"><svg><use href="#ic-house"/></svg></a>
+        <a href="#footer" aria-label="Próximo"><svg><use href="#ic-play"/></svg></a>
+      </div>
+    </div>
+    <svg class="detail-icon" viewBox="0 0 100 100"><use href="#ic-sting"/></svg>
+
+    <div class="detail-body">
+      <p>
+        A apitoxina, conhecida popularmente como veneno de abelha, é uma substância natural
+        produzida pelas abelhas operárias (<i>Apis mellifera</i>). É amplamente utilizada em
+        terapias alternativas, cosméticos e pesquisas científicas por conta de suas propriedades
+        anti-inflamatórias, analgésicas e cicatrizantes.
+      </p>
+      <div>
+        <p class="underline-title">Principais usos e benefícios</p>
+        <ul class="benefit-list">
+          <li><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="9"/></svg> Alívio de dores: utilizada em massagens para amenizar desconfortos musculares e dores nas articulações, como artrite e reumatismo.</li>
+          <li><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="9"/></svg> Ação anti-inflamatória: a melitina, um de seus componentes, possui alto potencial anti-inflamatório.</li>
+          <li><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="9"/></svg> Cosméticos: encontrada em cremes hidratantes e séruns, estimulando a circulação local e o viço da pele.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="footer">
+  <svg class="deco" style="top:16px; left:5%;" width="34" height="34"><use href="#ic-bee"/></svg>
+  <svg class="deco" style="top:16px; right:5%;" width="34" height="34"><use href="#ic-bee"/></svg>
+  <svg class="deco" style="bottom:14px; left:14%;" width="24" height="24"><use href="#ic-flower"/></svg>
+  <svg class="deco" style="bottom:14px; right:14%;" width="24" height="24"><use href="#ic-flower"/></svg>
+
+  <div class="wrap">
+    <div class="contact-row">
+      <div class="contact-item"><svg><use href="#ic-envelope"/></svg> contato@apiculturacesc.com</div>
+      <div class="contact-item"><svg><use href="#ic-phone"/></svg> FONE: (41) XXX-XXXX</div>
+      <div class="contact-item"><svg><use href="#ic-pin"/></svg> CESC</div>
+    </div>
+    <div class="credit">feito por Yasmin &amp; Maria Isabella</div>
+  </div>
+</footer>
+
+<script>
+  // active nav highlight on scroll
+  const sections = ['home','sobre','destaques'];
+  const links = document.querySelectorAll('nav.mainnav a');
+  window.addEventListener('scroll', () => {
+    let current = sections[0];
+    for (const id of sections) {
+      const el = document.getElementById(id);
+      if (el && window.scrollY + 120 >= el.offsetTop) current = id;
+    }
+    links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+  });
+</script>
 
 </body>
 </html>
